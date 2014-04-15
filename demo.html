@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="sexydates.js"></script>
+	<script>
+		var console = {};
+		console.log = function(text){
+			if (document.getElementById('Console').innerHTML.length > 0) {
+				text = document.getElementById('Console').innerHTML + "\r\n" + text;
+			}
+			document.getElementById('Console').innerHTML = text;
+		};
+
+		window.onload = function(){
+			SexyDates.Test();
+		}
+	</script>
+	<style>
+		#Console { font-size: 11px; white-space: pre-wrap; }
+	</style>
+</head>
+<body>
+<div id="Console"></div>
+</body>
+</html>
